@@ -11,8 +11,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    if @user.save #If saving the user was successful
-      redirect_to @user #Go to the show view of the user
+    if @user.save
+      redirect_to @user
     else
       render "new" #Go to the new view for the user
     end
